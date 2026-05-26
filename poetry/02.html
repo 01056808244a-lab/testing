@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>yoonarchive — poetry</title>
+<title>yoonarchive — untitled 02</title>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Serif:ital@1&family=Outfit:wght@200;300;400&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -20,70 +20,20 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; display: flex; j
 .nav-links a:hover { color: var(--brat); }
 .nav-links a.active { color: var(--white); }
 
-.page-hero { margin-top: 48px; padding: 6rem 2rem 3rem; border-bottom: 1px solid #2a2d2c; }
-.page-hero-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(4rem, 10vw, 9rem); line-height: 0.9; letter-spacing: 0.02em; color: var(--white); }
-.page-hero-sub { margin-top: 1rem; font-family: 'Outfit', sans-serif; font-weight: 200; font-size: 0.75rem; letter-spacing: 0.15em; color: #555; text-transform: uppercase; }
+.poem-detail { margin-top: 48px; padding: 5rem 2rem 4rem; max-width: 720px; }
 
-.content { padding: 4rem 2rem 5rem; }
+.poem-back { display: inline-block; margin-bottom: 3rem; font-family: 'Outfit', sans-serif; font-weight: 200; font-size: 0.65rem; letter-spacing: 0.16em; text-transform: uppercase; color: #555; text-decoration: none; transition: color 0.2s; }
+.poem-back:hover { color: var(--brat); }
 
-.poem-list { list-style: none; max-width: 700px; }
+.poem-header { margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 1px solid #2a2d2c; }
+.poem-title { font-family: 'Instrument Serif', serif; font-style: italic; font-weight: 400; font-size: clamp(2rem, 4vw, 3.5rem); color: var(--white); margin-bottom: 0.8rem; }
+.poem-date { font-family: 'Outfit', sans-serif; font-weight: 200; font-size: 0.6rem; letter-spacing: 0.2em; color: #444; text-transform: uppercase; }
 
-.poem-item { border-bottom: 1px solid #2a2d2c; }
-.poem-item:first-child { border-top: 1px solid #2a2d2c; }
+.poem-text { font-family: 'Playfair Display', serif; font-weight: 400; font-size: clamp(0.95rem, 1.8vw, 1.15rem); line-height: 2.4; color: #bbb; }
+.poem-text p { margin-bottom: 2.5rem; }
+.poem-text p:last-child { margin-bottom: 0; }
 
-.poem-link {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  padding: 2.2rem 0;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.poem-link:hover { padding-left: 1rem; }
-
-.poem-name {
-  font-family: 'Instrument Serif', serif;
-  font-style: italic;
-  font-weight: 400;
-  font-size: clamp(1.4rem, 3vw, 2.2rem);
-  color: #999;
-  transition: color 0.3s;
-}
-
-.poem-link:hover .poem-name { color: var(--white); }
-
-.poem-year {
-  font-family: 'Outfit', sans-serif;
-  font-weight: 200;
-  font-size: 0.6rem;
-  letter-spacing: 0.18em;
-  color: #444;
-  text-transform: uppercase;
-  transition: color 0.3s;
-}
-
-.poem-link:hover .poem-year { color: var(--brat); }
-
-.poem-excerpt {
-  font-family: 'Playfair Display', serif;
-  font-weight: 400;
-  font-size: 0.8rem;
-  line-height: 1.8;
-  color: #555;
-  padding: 0 0 2rem 1rem;
-  max-width: 500px;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease, padding 0.4s ease;
-}
-
-.poem-item:hover .poem-excerpt {
-  max-height: 100px;
-  padding: 0.5rem 0 2rem 1rem;
-}
-
-footer { background: var(--black); color: var(--white); padding: 2rem; display: flex; justify-content: space-between; align-items: center; }
+footer { background: var(--black); color: var(--white); padding: 2rem; display: flex; justify-content: space-between; align-items: center; margin-top: 5rem; }
 .footer-logo { font-family: 'Outfit', sans-serif; font-weight: 200; font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: #555; }
 .footer-links { display: flex; gap: 2rem; list-style: none; }
 .footer-links a { font-family: 'Outfit', sans-serif; font-weight: 200; font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; color: #555; text-decoration: none; transition: color 0.2s; }
@@ -99,38 +49,29 @@ footer { background: var(--black); color: var(--white); padding: 2rem; display: 
 <div class="cursor-ring" id="cursorRing"></div>
 
 <nav>
-  <a href="yoonarchive (2).html" class="nav-logo">Yoonarchive</a>
+  <a href="../yoonarchive (2).html" class="nav-logo">Yoonarchive</a>
   <ul class="nav-links">
-    <li><a href="ceramics.html">Ceramics</a></li>
-    <li><a href="poetry.html" class="active">Poetry</a></li>
-    <li><a href="photography.html">Photography</a></li>
-    <li><a href="video.html">Video</a></li>
-    <li><a href="about.html">About</a></li>
+    <li><a href="../ceramics.html">Ceramics</a></li>
+    <li><a href="../poetry.html" class="active">Poetry</a></li>
+    <li><a href="../photography.html">Photography</a></li>
+    <li><a href="../video.html">Video</a></li>
+    <li><a href="../about.html">About</a></li>
   </ul>
 </nav>
 
-<div class="page-hero fade-up">
-  <div class="page-hero-title">POETRY</div>
-  <div class="page-hero-sub">words · fragments · thoughts</div>
-</div>
+<div class="poem-detail">
+  <a href="../poetry.html" class="poem-back fade-up">&larr; Back to Poetry</a>
 
-<div class="content">
-  <ul class="poem-list fade-up">
-    <li class="poem-item">
-      <a href="poetry/01.html" class="poem-link">
-        <span class="poem-name">untitled 01</span>
-        <span class="poem-year">2024</span>
-      </a>
-      <div class="poem-excerpt">타협하지 않는다. 반죽을 해서 핑핑이가 만들어졌다...</div>
-    </li>
-    <li class="poem-item">
-      <a href="poetry/02.html" class="poem-link">
-        <span class="poem-name">untitled 02</span>
-        <span class="poem-year">2025</span>
-      </a>
-      <div class="poem-excerpt">다른 우주에서의 질병은 아파트에 비할 바가 없고...</div>
-    </li>
-  </ul>
+  <div class="poem-header fade-up">
+    <h1 class="poem-title">untitled 02</h1>
+    <div class="poem-date">2025</div>
+  </div>
+
+  <div class="poem-text fade-up">
+    <p>다른 우주에서의 질병은 아파트에 비할 바가 없고 시간이란 허상이다. 자유와 함께 등장한 박제는 흑과 백의 차원에서 구현된다. 얽힌 흐름이 생명력을 표출할 때, 시공간의 경계는 흐려지고 사고의 유한함이 명확해진다.</p>
+
+    <p>구식 수레바퀴 상상 비행 벽면 또각거리는 투명한 절단의 반복.</p>
+  </div>
 </div>
 
 <footer>
