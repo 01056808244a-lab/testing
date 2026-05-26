@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>yoonarchive — poetry</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@200;300;400&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+:root {
+  --black: #0f0f0f;
+  --white: #ffffff;
+  --grey: #f2f2f2;
+  --mid: #888;
+  --brat: #8ACE00;
+  --poetry-bg: #1c1f1e;
+}
+
+body {
+  background: var(--poetry-bg);
+  color: var(--white);
+  font-family: 'Outfit', sans-serif;
+  cursor: none;
+  overflow-x: hidden;
+}
+
+.cursor { position: fixed; width: 6px; height: 6px; background: var(--white); border-radius: 50%; pointer-events: none; z-index: 9999; transform: translate(-50%,-50%); }
+.cursor-ring { position: fixed; width: 28px; height: 28px; border: 1px solid #555; border-radius: 50%; pointer-events: none; z-index: 9998; transform: translate(-50%,-50%); transition: all 0.25s ease; }
+
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 200;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1.4rem 2rem;
+  background: var(--poetry-bg);
+  border-bottom: 1px solid #2a2d2c;
+}
+
+.nav-logo {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--white);
+}
+
+.nav-links { display: flex; gap: 2.5rem; list-style: none; }
+.nav-links a {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 200;
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #555;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--brat); }
+.nav-links a.active { color: var(--white); }
+
+.page-hero {
+  margin-top: 48px;
+  padding: 6rem 2rem 3rem;
+  border-bottom: 1px solid #2a2d2c;
+}
+
+.page-hero-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(4rem, 10vw, 9rem);
+  line-height: 0.9;
+  letter-spacing: 0.02em;
+  color: var(--white);
+}
+
+.page-hero-sub {
+  margin-top: 1rem;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 200;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  color: #555;
+  text-transform: uppercase;
+}
+
+.content { padding: 4rem 2rem 5rem; }
+
+.poem-card {
+  max-width: 650px;
+  margin-bottom: 5rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid #2a2d2c;
+}
+
+.poem-card:last-child { border-bottom: none; }
+
+.poem-title {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 300;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.poem-text {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-size: clamp(1rem, 2vw, 1.35rem);
+  line-height: 2.2;
+  color: #ccc;
+}
+
+.poem-text em {
+  font-style: italic;
+  color: var(--white);
+}
+
+.poem-date {
+  margin-top: 2rem;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 200;
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  color: #444;
+  text-transform: uppercase;
+}
+
+footer {
+  background: var(--black);
+  color: var(--white);
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-logo {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 200; font-size: 0.65rem;
+  letter-spacing: 0.18em; text-transform: uppercase; color: #555;
+}
+
+.footer-links { display: flex; gap: 2rem; list-style: none; }
+.footer-links a {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 200; font-size: 0.65rem;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: #555; text-decoration: none; transition: color 0.2s;
+}
+.footer-links a:hover { color: var(--white); }
+
+.fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.8s ease, transform 0.8s ease; }
+.fade-up.visible { opacity: 1; transform: none; }
+</style>
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<nav>
+  <a href="yoonarchive (2).html" class="nav-logo">Yoonarchive</a>
+  <ul class="nav-links">
+    <li><a href="ceramics.html">Ceramics</a></li>
+    <li><a href="poetry.html" class="active">Poetry</a></li>
+    <li><a href="photography.html">Photography</a></li>
+    <li><a href="video.html">Video</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero fade-up">
+  <div class="page-hero-title">POETRY</div>
+  <div class="page-hero-sub">words · fragments · thoughts</div>
+</div>
+
+<div class="content">
+  <div class="poem-card fade-up">
+    <div class="poem-title">untitled 01</div>
+    <div class="poem-text">
+      타협하지 않는다.<br>
+      반죽을 해서 핑핑이가 만들어졌다.<br>
+      털을 세다가 반사되는 끝에 다다랐거늘,<br>
+      눈을 떠보니 수탉은 이미 도망간 뒤다.<br><br>
+      <em>소금쟁이가 슬슬 물 위를 떠다니는데,<br>
+      우리 가재잡기나 할까?</em>
+    </div>
+    <div class="poem-date">2024</div>
+  </div>
+
+  <div class="poem-card fade-up">
+    <div class="poem-title">untitled 02</div>
+    <div class="poem-text">
+      <em>여기에 새로운 시를 추가하세요.</em>
+    </div>
+    <div class="poem-date">2025</div>
+  </div>
+</div>
+
+<footer>
+  <span class="footer-logo">Yoonarchive &copy; 2026</span>
+  <ul class="footer-links">
+    <li><a href="#">Instagram</a></li>
+    <li><a href="#">Youtube</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</footer>
+
+<script>
+const cursor = document.getElementById('cursor');
+const ring = document.getElementById('cursorRing');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove', e => { mx=e.clientX; my=e.clientY; cursor.style.left=mx+'px'; cursor.style.top=my+'px'; });
+(function animRing(){rx+=(mx-rx)*0.1;ry+=(my-ry)*0.1;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(animRing)})();
+const obs = new IntersectionObserver(entries => { entries.forEach((e,i) => { if(e.isIntersecting) setTimeout(()=>e.target.classList.add('visible'),i*80); }); }, {threshold:0.1});
+document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>

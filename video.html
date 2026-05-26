@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>yoonarchive — video</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@200;300;400&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+:root { --black: #0f0f0f; --white: #ffffff; --grey: #f2f2f2; --mid: #888; --brat: #8ACE00; }
+body { background: var(--grey); color: var(--black); font-family: 'Outfit', sans-serif; cursor: none; overflow-x: hidden; }
+.cursor { position: fixed; width: 6px; height: 6px; background: var(--black); border-radius: 50%; pointer-events: none; z-index: 9999; transform: translate(-50%,-50%); }
+.cursor-ring { position: fixed; width: 28px; height: 28px; border: 1px solid #bbb; border-radius: 50%; pointer-events: none; z-index: 9998; transform: translate(-50%,-50%); transition: all 0.25s ease; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; display: flex; justify-content: space-between; align-items: flex-start; padding: 1.4rem 2rem; background: var(--grey); border-bottom: 1px solid #e0e0e0; }
+.nav-logo { font-family: 'Outfit', sans-serif; font-weight: 400; font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none; color: var(--black); }
+.nav-links { display: flex; gap: 2.5rem; list-style: none; }
+.nav-links a { font-family: 'Outfit', sans-serif; font-weight: 200; font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--mid); text-decoration: none; transition: color 0.2s; }
+.nav-links a:hover { color: var(--brat); }
+.nav-links a.active { color: var(--black); }
+
+.page-hero { margin-top: 48px; padding: 6rem 2rem 3rem; border-bottom: 1px solid #e0e0e0; }
+.page-hero-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(4rem, 10vw, 9rem); line-height: 0.9; letter-spacing: 0.02em; }
+.page-hero-sub { margin-top: 1rem; font-family: 'Outfit', sans-serif; font-weight: 200; font-size: 0.75rem; letter-spacing: 0.15em; color: var(--mid); text-transform: uppercase; }
+
+.content { padding: 3rem 2rem 5rem; }
+
+.video-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.video-card { position: relative; }
+.video-card .thumb { aspect-ratio: 16/9; background: var(--black); display: flex; align-items: center; justify-content: center; font-family: 'Outfit', sans-serif; font-weight: 200; font-size: 0.6rem; letter-spacing: 0.12em; color: #555; text-transform: uppercase; overflow: hidden; position: relative; }
+.video-card .play-btn { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 44px; height: 44px; border: 1px solid rgba(255,255,255,0.4); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: border-color 0.3s; }
+.video-card .play-btn::after { content: ''; border-left: 11px solid #fff; border-top: 6px solid transparent; border-bottom: 6px solid transparent; margin-left: 3px; }
+.video-card:hover .play-btn { border-color: white; }
+.video-card .meta { padding-top: 0.8rem; font-family: 'Outfit', sans-serif; font-weight: 200; font-size: 0.6rem; letter-spacing: 0.12em; color: var(--mid); text-transform: uppercase; }
+
+footer { background: var(--black); color: var(--white); padding: 2rem; display: flex; justify-content: space-between; align-items: center; }
+.footer-logo { font-family: 'Outfit', sans-serif; font-weight: 200; font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: #555; }
+.footer-links { display: flex; gap: 2rem; list-style: none; }
+.footer-links a { font-family: 'Outfit', sans-serif; font-weight: 200; font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; color: #555; text-decoration: none; transition: color 0.2s; }
+.footer-links a:hover { color: var(--white); }
+
+.fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.8s ease, transform 0.8s ease; }
+.fade-up.visible { opacity: 1; transform: none; }
+</style>
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<nav>
+  <a href="yoonarchive (2).html" class="nav-logo">Yoonarchive</a>
+  <ul class="nav-links">
+    <li><a href="ceramics.html">Ceramics</a></li>
+    <li><a href="poetry.html">Poetry</a></li>
+    <li><a href="photography.html">Photography</a></li>
+    <li><a href="video.html" class="active">Video</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero fade-up">
+  <div class="page-hero-title">VIDEO</div>
+  <div class="page-hero-sub">diaries · vlogs · process</div>
+</div>
+
+<div class="content">
+  <div class="video-grid fade-up">
+    <div class="video-card">
+      <div class="thumb">digital diaryyyy<div class="play-btn"></div></div>
+      <div class="meta">mai 5 2026 · cooking diary · 3'42"</div>
+    </div>
+    <div class="video-card">
+      <div class="thumb">europe w/ friend<div class="play-btn"></div></div>
+      <div class="meta">apr 2026 · travel · 8'15"</div>
+    </div>
+    <div class="video-card">
+      <div class="thumb">first clay figure<div class="play-btn"></div></div>
+      <div class="meta">mar 2026 · ceramics process · 5'20"</div>
+    </div>
+    <div class="video-card">
+      <div class="thumb">spring in busan<div class="play-btn"></div></div>
+      <div class="meta">feb 2026 · daily · 4'08"</div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <span class="footer-logo">Yoonarchive &copy; 2026</span>
+  <ul class="footer-links">
+    <li><a href="#">Instagram</a></li>
+    <li><a href="#">Youtube</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</footer>
+
+<script>
+const cursor = document.getElementById('cursor');
+const ring = document.getElementById('cursorRing');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove', e => { mx=e.clientX; my=e.clientY; cursor.style.left=mx+'px'; cursor.style.top=my+'px'; });
+(function animRing(){rx+=(mx-rx)*0.1;ry+=(my-ry)*0.1;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(animRing)})();
+const obs = new IntersectionObserver(entries => { entries.forEach((e,i) => { if(e.isIntersecting) setTimeout(()=>e.target.classList.add('visible'),i*80); }); }, {threshold:0.1});
+document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
