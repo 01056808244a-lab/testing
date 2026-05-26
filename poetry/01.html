@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>yoonarchive — untitled 01</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Serif:ital@1&family=Outfit:wght@200;300;400&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+:root { --black: #0f0f0f; --white: #ffffff; --grey: #f2f2f2; --mid: #888; --brat: #8ACE00; --poetry-bg: #1c1f1e; }
+body { background: var(--poetry-bg); color: var(--white); font-family: 'Outfit', sans-serif; cursor: none; overflow-x: hidden; }
+.cursor { position: fixed; width: 6px; height: 6px; background: var(--white); border-radius: 50%; pointer-events: none; z-index: 9999; transform: translate(-50%,-50%); }
+.cursor-ring { position: fixed; width: 28px; height: 28px; border: 1px solid #555; border-radius: 50%; pointer-events: none; z-index: 9998; transform: translate(-50%,-50%); transition: all 0.25s ease; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; display: flex; justify-content: space-between; align-items: flex-start; padding: 1.4rem 2rem; background: var(--poetry-bg); border-bottom: 1px solid #2a2d2c; }
+.nav-logo { font-family: 'Outfit', sans-serif; font-weight: 400; font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none; color: var(--white); }
+.nav-links { display: flex; gap: 2.5rem; list-style: none; }
+.nav-links a { font-family: 'Outfit', sans-serif; font-weight: 200; font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: #555; text-decoration: none; transition: color 0.2s; }
+.nav-links a:hover { color: var(--brat); }
+.nav-links a.active { color: var(--white); }
+
+.poem-detail { margin-top: 48px; padding: 5rem 2rem 4rem; max-width: 720px; }
+
+.poem-back { display: inline-block; margin-bottom: 3rem; font-family: 'Outfit', sans-serif; font-weight: 200; font-size: 0.65rem; letter-spacing: 0.16em; text-transform: uppercase; color: #555; text-decoration: none; transition: color 0.2s; }
+.poem-back:hover { color: var(--brat); }
+
+.poem-header { margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 1px solid #2a2d2c; }
+.poem-title { font-family: 'Instrument Serif', serif; font-style: italic; font-weight: 400; font-size: clamp(2rem, 4vw, 3.5rem); color: var(--white); margin-bottom: 0.8rem; }
+.poem-date { font-family: 'Outfit', sans-serif; font-weight: 200; font-size: 0.6rem; letter-spacing: 0.2em; color: #444; text-transform: uppercase; }
+
+.poem-text { font-family: 'Playfair Display', serif; font-weight: 400; font-size: clamp(0.95rem, 1.8vw, 1.15rem); line-height: 2.4; color: #bbb; }
+.poem-text p { margin-bottom: 2.5rem; }
+.poem-text p:last-child { margin-bottom: 0; }
+
+footer { background: var(--black); color: var(--white); padding: 2rem; display: flex; justify-content: space-between; align-items: center; margin-top: 5rem; }
+.footer-logo { font-family: 'Outfit', sans-serif; font-weight: 200; font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: #555; }
+.footer-links { display: flex; gap: 2rem; list-style: none; }
+.footer-links a { font-family: 'Outfit', sans-serif; font-weight: 200; font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; color: #555; text-decoration: none; transition: color 0.2s; }
+.footer-links a:hover { color: var(--white); }
+
+.fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.8s ease, transform 0.8s ease; }
+.fade-up.visible { opacity: 1; transform: none; }
+</style>
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<nav>
+  <a href="../yoonarchive (2).html" class="nav-logo">Yoonarchive</a>
+  <ul class="nav-links">
+    <li><a href="../ceramics.html">Ceramics</a></li>
+    <li><a href="../poetry.html" class="active">Poetry</a></li>
+    <li><a href="../photography.html">Photography</a></li>
+    <li><a href="../video.html">Video</a></li>
+    <li><a href="../about.html">About</a></li>
+  </ul>
+</nav>
+
+<div class="poem-detail">
+  <a href="../poetry.html" class="poem-back fade-up">&larr; Back to Poetry</a>
+
+  <div class="poem-header fade-up">
+    <h1 class="poem-title">untitled 01</h1>
+    <div class="poem-date">2024</div>
+  </div>
+
+  <div class="poem-text fade-up">
+    <p>타협하지 않는다. 반죽을 해서 핑핑이가 만들어졌다. 털을 세다가 반사되는 끝에 다다랐거늘, 눈을 떠보니 수탉은 이미 도망간 뒤다. 성스러운 왕관에 끈적한 토사물을 부었더니 한 아이가 그 주인의 건강을 분석해낸다. 눈썹을 긁다 어디선가 들려오는 물소리에 심장은 리듬감을 되찾고, 나귀는 꼬리를 쳐대 파리를 쫓는다. H와 O가 만나지 않았더라면 세상은 어떤 형태로 존재하는가에 대한 답은 이미 우리 모두 배웠다. 결국 네가 그 가치를 알아볼 수 있느냐의 문제인거야. 소정아, 연경아, 하예야, 검정 fauteuil L2에 몸을 겹쳐 질감을 느껴봐. 사실 모든 건 자가복제에 거북이가 이해할 수 있는 수준이다. 평평하다며? 어렵지 않은 것들은 죄다 껴안고 있어. 문제가 없단 건 분명하지만 그 귀청을 좀 떨어지게 해줘. 꿀꺽, 들이키면 9372-7004호 감방 문이 열리고 내 발바닥을 좀 봐. 일렁이는 불길 속의 눈이 반짝여서 차마 뒤를 돌 수 없는 것.</p>
+
+    <p>소금쟁이가 슬슬 물 위를 떠다니는데, 우리 가재잡기나 할까? 먼저 계단을 다 오르는 사람이 지는거다? 그럼 올라갈 필요가 없는 것 아냐? 무슨 질문이 그렇게 많아? 매트리스 위 옷가지들이 다 무슨 소용이니? 끝없는 음악이라는 걸 배경으로 삼아 물결을 타보는 게 어때? 모아나가 꿈이었던 소녀는 용왕님의 딸이 되는걸까? 매운 치토스가 녹아서 아스팔트에 갈린 무릎 마냥 형체를 알아볼 수 없을 때, 핥아줄 사람이 너야? 저 손가락은 여기, 콧구멍은 닫고, 끝과 끝을 연결시키는거야. 처음 해보는 것 치고는 잘하는 걸? 그리하여 - 잘린 나뭇잎을 들고 온 세상을 헤맸다. 너는 내 곁에서 사라진 지 오래였고 1g이 몇 개 모였을지 모를 그 나뭇잎이 무거워 나는 손을 부들부들 떨었다. 황량한 노랑, 아니 누런 물결 앞에서 그저 멍하니 흐린 하늘에 빨려들듯 눈을 고정시키면 어느새 하얀 새들이 내 주변을 맴돌곤 했다. 게중에는 작은 놈도, 큰 놈도 있어 제법 다양한 군집이 머무는 지대인 듯 했다. 나야말로, 날개 없이 날아간 너를 끈질기게도 쫓고 있는데 어떤 집단에 소속될 순 없는걸까. 어쩌면 네가 이미 그 기회를 모두 앗아간 것이다. 내 에너지와 내 영혼, 내 노력과 나의 정성, 그것들이야말로 나를 날게 할 것들이었는데. 부리가 자라났고 발톱은 빠지려 한다. 아 내가 알기론 하마도 발톱이 있었는데, 이건 꿈 속이라 그런가? 그렇다면 꿈이 이렇게 고통스러울 건 뭐란가? 1920년대의 어느 기왓집에서 둥지를 짓던 제비가 참 먼 길을 오기도 했다. 이 정도면 그만 되지 않았냐, 나와 타협을 하려 한다.</p>
+
+    <p>목을 졸랐더니 배꼽이 쑥 들어간다. 이것도 저것도 아니다. 부스러진 쇳조각들이 붉은 빛을 띠어 괜시리 무서워진다. 어느새 차가워진 바다는 시원한 바람을 실어보내고 그에 흔들리는 전봇대가 길을 조금씩 비춘다. 이제 지긋지긋해. 더이상 견딜 수 없어. 그 곡선의 아름다움은 이미 깨달았지만 사용과 오용과 남용의 차이를 배우지 못한 것은 실수였다. 책임과 배신과 풀장이 뒤섞여 뮈소의 펜시브로 던져졌다. 이제 보내주자. 그만 할 때도 됐잖아. 코알라의 코가 넌 무슨 색인지 아니. 색이라는 것도 인간이 만들어낸 개념일 뿐이야. 우리는 사실 동물인걸. 목발을 휘두르고선 영상 촬영을 마친다. 번쩍이는 골드체인은 배를 깎을 때 쓰시고요, 단단한 다이아는 값을 깎을 때 쓰세요. 모든 건 저마다의 용도와 방식이 있는 법이거든요. 카레 독립서적 모래 축적된 지방 결레를 무릅쓰고 완두콩에 싹이 나서. 눈물을 참지 못해 버렸다.</p>
+  </div>
+</div>
+
+<footer>
+  <span class="footer-logo">Yoonarchive &copy; 2026</span>
+  <ul class="footer-links">
+    <li><a href="#">Instagram</a></li>
+    <li><a href="#">Youtube</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</footer>
+
+<script>
+const cursor = document.getElementById('cursor');
+const ring = document.getElementById('cursorRing');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove', e => { mx=e.clientX; my=e.clientY; cursor.style.left=mx+'px'; cursor.style.top=my+'px'; });
+(function animRing(){rx+=(mx-rx)*0.1;ry+=(my-ry)*0.1;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(animRing)})();
+const obs = new IntersectionObserver(entries => { entries.forEach((e,i) => { if(e.isIntersecting) setTimeout(()=>e.target.classList.add('visible'),i*80); }); }, {threshold:0.1});
+document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
